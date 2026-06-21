@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamza Ahmad — AI/ML Engineer</title>
+<meta name="description" content="Hamza Ahmad — AI/ML Engineer specializing in clinical ML systems, RAG pipelines, and agentic AI. Final-year CS student, University of Peshawar.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">HAMZA<span>.</span>AHMAD</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18M0 7H18M0 13H18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero section">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">AI / ML Engineer — Peshawar, Pakistan</p>
+        <h1>I build machine learning systems that hold up<br class="lg-only"> under clinical scrutiny.</h1>
+        <p class="lede">Final-year Computer Science student specializing in end-to-end ML pipelines, retrieval-augmented generation, and agentic AI — grounded in real clinical guidelines, not just benchmark scores. Starting an ML/AI engineering role at FlyRank, July 2026.</p>
+        <div class="btn-row">
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <a href="/assets/Hamza_Ahmad_Resume.pdf" class="btn" download>Download Résumé</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-photo">
+          <img src="images/hamza-photo.jpeg" alt="Portrait of Hamza Ahmad">
+        </div>
+        <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value">2</span>
+          <span class="stat-label">Production ML Pipelines</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">5</span>
+          <span class="stat-label">Agentic Routing Tools</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Offline / No Cloud API</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">4</span>
+          <span class="stat-label">Clinical Guideline Sources</span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hr">
+
+  <!-- SIGNATURE: LIVE ARCHITECTURE DIAGRAM -->
+  <section class="section section-bordered architecture-section">
+    <div class="wrap">
+      <p class="eyebrow">System Architecture — Live Diagram</p>
+      <h2 class="reveal">How the CVD Risk System actually works</h2>
+      <p class="lede reveal">Not a screenshot. Hover any node to see what it does, what it talks to, and why it's there. This is the real request path for the featured project below.</p>
+
+      <div class="diagram-wrap reveal" id="diagramWrap">
+        <svg id="archDiagram" viewBox="0 0 1100 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System architecture diagram showing patient input flowing through ML and RAG pipelines to a unified response">
+
+          <!-- connecting lines -->
+          <g class="conn-lines" stroke="#D8D4CC" stroke-width="1.5" fill="none">
+            <path d="M150,280 L290,150" />
+            <path d="M150,280 L290,280" />
+            <path d="M150,280 L290,410" />
+            <path d="M430,150 L560,200" />
+            <path d="M430,280 L560,280" />
+            <path d="M430,410 L560,360" />
+            <path d="M700,200 L560,280" />
+            <path d="M700,280 L560,280" />
+            <path d="M700,360 L560,280" />
+            <path d="M760,280 L900,280" />
+          </g>
+
+          <!-- node: patient input -->
+          <g class="node" data-desc="Patient enters symptoms, vitals, and history through the Flutter mobile app or Streamlit web frontend.">
+            <rect x="20" y="240" width="130" height="80" rx="2" />
+            <text x="85" y="275" text-anchor="middle" class="node-title">Patient</text>
+            <text x="85" y="293" text-anchor="middle" class="node-sub">Input</text>
+          </g>
+
+          <!-- node: ML model -->
+          <g class="node" data-desc="Logistic Regression (primary) and Random Forest (backup) trained on the UCI Cleveland Heart Disease dataset, served via FastAPI on port 8000.">
+            <rect x="290" y="110" width="140" height="80" rx="2" />
+            <text x="360" y="145" text-anchor="middle" class="node-title">ML Model</text>
+            <text x="360" y="163" text-anchor="middle" class="node-sub">LogReg + RF</text>
+          </g>
+
+          <!-- node: agentic router -->
+          <g class="node node-accent" data-desc="Five custom tools route each patient query to the correct clinical guideline before any response is generated — hypertension, CHD, general risk, lifestyle, or emergency triage.">
+            <rect x="290" y="240" width="140" height="80" rx="2" />
+            <text x="360" y="275" text-anchor="middle" class="node-title">Agentic</text>
+            <text x="360" y="293" text-anchor="middle" class="node-sub">5-Tool Router</text>
+          </g>
+
+          <!-- node: RAG -->
+          <g class="node" data-desc="LangChain + ChromaDB retrieval over AHA, ESC, WHO and NCEP guideline embeddings, generated locally by Llama 3.2 via Ollama — zero cloud calls.">
+            <rect x="290" y="370" width="140" height="80" rx="2" />
+            <text x="360" y="405" text-anchor="middle" class="node-title">RAG Chatbot</text>
+            <text x="360" y="423" text-anchor="middle" class="node-sub">LangChain · Chroma</text>
+          </g>
+
+          <!-- node: guideline KB -->
+          <g class="node" data-desc="Clinical knowledge base: AHA/ACC, ESC, WHO and NCEP guidelines, chunked and embedded for retrieval.">
+            <rect x="560" y="160" width="140" height="80" rx="2" />
+            <text x="630" y="195" text-anchor="middle" class="node-title">Guideline KB</text>
+            <text x="630" y="213" text-anchor="middle" class="node-sub">AHA · ESC · WHO</text>
+          </g>
+
+          <!-- node: fastapi -->
+          <g class="node node-accent" data-desc="FastAPI orchestrates both services — ML inference and RAG generation run as coordinated multi-service backends." >
+            <rect x="560" y="240" width="140" height="80" rx="2" />
+            <text x="630" y="275" text-anchor="middle" class="node-title">FastAPI</text>
+            <text x="630" y="293" text-anchor="middle" class="node-sub">Orchestration</text>
+          </g>
+
+          <!-- node: llama -->
+          <g class="node" data-desc="Llama 3.2 runs locally via Ollama — response generation never leaves the machine.">
+            <rect x="560" y="320" width="140" height="80" rx="2" />
+            <text x="630" y="355" text-anchor="middle" class="node-title">Llama 3.2</text>
+            <text x="630" y="373" text-anchor="middle" class="node-sub">via Ollama, local</text>
+          </g>
+
+          <!-- node: unified UI -->
+          <g class="node" data-desc="Streamlit web frontend (and Flutter mobile app) merge the ML risk score with the RAG chatbot's grounded explanation into one result screen.">
+            <rect x="900" y="240" width="160" height="80" rx="2" />
+            <text x="980" y="275" text-anchor="middle" class="node-title">Unified Result</text>
+            <text x="980" y="293" text-anchor="middle" class="node-sub">Streamlit / Flutter</text>
+          </g>
+
+        </svg>
+
+        <div class="diagram-tooltip" id="diagramTooltip" aria-hidden="true"></div>
+      </div>
+
+      <p class="diagram-caption mono-tag">Hover or tap a node — full write-up in the project case study →</p>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECT PREVIEW -->
+  <section class="section section-bordered">
+    <div class="wrap">
+      <p class="eyebrow">Featured Work</p>
+      <div class="featured-grid reveal">
+        <div>
+          <h2>AI-Driven Cardiovascular<br>Disease Risk System</h2>
+          <p class="lede" style="margin-top:18px;">An end-to-end clinical decision-support tool: ML risk prediction fused with an offline RAG chatbot, grounded in real cardiology guidelines, routed through a five-tool agentic layer.</p>
+          <div class="tag-row" style="margin-top:24px;">
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Streamlit</span>
+          </div>
+          <div class="btn-row" style="margin-top:32px;">
+            <a href="projects.html#cvd-system" class="btn">Read the Case Study</a>
+          </div>
+        </div>
+        <div class="featured-meta">
+          <div class="meta-row">
+            <span class="mono-tag">ROLE</span>
+            <span>Sole ML/Backend Engineer</span>
+          </div>
+          <div class="meta-row">
+            <span class="mono-tag">TIMELINE</span>
+            <span>2025 – 2026</span>
+          </div>
+          <div class="meta-row">
+            <span class="mono-tag">SUPERVISOR</span>
+            <span>Dr. Rehman Ali</span>
+          </div>
+          <div class="meta-row">
+            <span class="mono-tag">DATASET</span>
+            <span>UCI Cleveland Heart Disease</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS READOUT -->
+  <section class="section section-bordered">
+    <div class="wrap">
+      <p class="eyebrow">Technical Surface</p>
+      <h2 class="reveal" style="margin-bottom:40px;">What I work with</h2>
+      <div class="skills-grid reveal">
+        <div class="skill-col">
+          <h3>Machine Learning</h3>
+          <ul>
+            <li>Scikit-learn, Logistic Regression, Random Forest, SVM</li>
+            <li>ROC-AUC, cross-validation, SMOTE for class imbalance</li>
+            <li>Feature engineering, data cleaning, UCI datasets</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>RAG & Agentic AI</h3>
+          <ul>
+            <li>LangChain, ChromaDB, Ollama (Llama 3.2)</li>
+            <li>HuggingFace Transformers, sentence-transformers</li>
+            <li>Agentic tool routing, document ingestion pipelines</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Deployment & APIs</h3>
+          <ul>
+            <li>FastAPI, REST API design, model serialization</li>
+            <li>Multi-service backend orchestration</li>
+            <li>Streamlit, Flutter (Dart) mobile frontends</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Languages & Tools</h3>
+          <ul>
+            <li>Python, Dart, JavaScript, HTML/CSS</li>
+            <li>Git, VS Code, Jupyter Notebook</li>
+            <li>Pandas, NumPy, Matplotlib, Seaborn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="wrap cta-wrap reveal">
+      <h2>Starting an ML/AI engineering role at FlyRank in July 2026 — and open to in-person opportunities in Lahore.</h2>
+      <div class="btn-row" style="margin-top:32px;">
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        <a href="about.html" class="btn">More About Me</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="footer-meta">© 2026 Hamza Ahmad</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/hamza-ahmad-bb27a7261" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hamzahmad992@gmail.com">Email</a>
+      <a href="tel:+923369779120">Phone</a>
+    </div>
+    <span class="footer-meta">Peshawar, Pakistan</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/diagram.js"></script>
+</body>
+</html>
